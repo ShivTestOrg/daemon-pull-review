@@ -18,10 +18,6 @@ async function performPullPrecheck(
  * us to add more callbacks for a particular event without modifying the core logic.
  */
 const callbacks = {
-  "pull_request.opened": [performPullPrecheck],
-  "pull_request.ready_for_review": [performPullPrecheck],
-  "pull_request.reopened": [performPullPrecheck],
-  "pull_request.edited": [handlePullRequestEditedEvent],
   "issue_comment.created": [autofixHandler],
 } as ProxyCallbacks;
 
